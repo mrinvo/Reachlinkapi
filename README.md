@@ -1,6 +1,9 @@
-# Notes 
+# - Notes 
 
 # You can find a ready postman collection in storage diractory
+
+# Based on requirments no auth was made , instead there was advertiser table with its own crud
+
 
 
 
