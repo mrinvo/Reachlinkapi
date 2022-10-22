@@ -1,0 +1,33 @@
+<?php
+		return [
+		"tag"	=>		"Tag",
+		"advertiser"	=> "Advertiser",
+		"email"	=>		"email",
+		"success"	=>		"Success",
+		"upload"	=>		"Upload",
+		"created_at"	=>		"Created at",
+		"updated_at"	=>		"Updated at",
+		"lock_screen"	=>		"Lock Screen",
+		"start"	=>		"Start",
+		"drag_drop_files_here"	=>		"Drag and drop files here or choose files",
+		"add_files"	=>		"choose files",
+		"start_upload"	=>		"upload all",
+		"cancel_upload"	=>		"cancel upload all",
+		"multi_upload"	=>		"Multiple upload",
+		"file_too_big"	=>		"The file size is very large, it should not exceed :size MB",
+		"updated_account_and_password"	=>		"Your information and password have been successfully updated",
+		"the_password_is_old"	=>		"You do not have to enter the same old password",
+		"category"	=>		"Category",
+		"start_date"	=>		"start_date",
+		"free"	=>		"free",
+		"type"	=>		"type",
+		"category_id"	=>	"category_id",
+		"name"	=>		"name",
+		"ad"	=>		"ad",
+        "undefinedRecord"	=>		"This record does not exist or has already been deleted",
+        "updated"	=>		"Successfully updated",
+		"deleted"	=>		"Successfully deleted",
+        "added"	=>		"Successfully added",
+
+
+];

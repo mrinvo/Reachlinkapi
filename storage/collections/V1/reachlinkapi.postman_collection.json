@@ -1,0 +1,1233 @@
+{
+	"info": {
+		"_postman_id": "6c7d3a6a-7467-4015-8c9d-ef414d1fc92d",
+		"name": "reachapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21997210"
+	},
+	"item": [
+		{
+			"name": "advertiser",
+			"item": [
+				{
+					"name": "get all advertiser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/advertiser",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"advertiser"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "show by id advertiser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/advertiser/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"advertiser",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Record advertiser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "some string",
+									"description": "normal input text",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "email@gmail.com",
+									"description": "email Input",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/advertiser",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"advertiser"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Record By ID advertiser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "sdfsadf",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ali@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/advertiser/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"advertiser",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Record By ID advertiser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/advertiser/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"advertiser",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Multi Delete Record By IDs advertiser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "selected_data[]",
+									"value": "1",
+									"description": "Record ID Integer",
+									"type": "text"
+								},
+								{
+									"key": "selected_data[]",
+									"value": "2",
+									"description": "Record ID Integer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/advertiser/multi_delete",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"advertiser",
+								"multi_delete"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category",
+			"item": [
+				{
+					"name": "get all category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/category",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"category"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "show by id category",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/category/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"category",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Record category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "some string",
+									"description": "normal input text",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/category",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"category"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Record By ID category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "asdfsdfs",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/category/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"category",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Record By ID category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/category/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"category",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Multi Delete Record By IDs category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "selected_data[]",
+									"value": "1",
+									"description": "Record ID Integer",
+									"type": "text"
+								},
+								{
+									"key": "selected_data[]",
+									"value": "2",
+									"description": "Record ID Integer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/category/multi_delete",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"category",
+								"multi_delete"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ad",
+			"item": [
+				{
+					"name": "get all ads with or without category_id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/ad",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"ad"
+							],
+							"query": [
+								{
+									"key": "category_id",
+									"value": "1",
+									"description": "Optional if you want fetch a certin category",
+									"disabled": true
+								}
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "get all ads with filters",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "advertiser_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/ad/filters",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"ad",
+								"filters"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "show ad by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/ad/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"ad",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Record ad",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "first ad",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "first ad description",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "free",
+									"type": "text"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "advertiser_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tags[]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "start_date",
+									"value": "2022-10-22",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/ad",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"ad"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Record By Ad ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "firstad",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/ad/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"ad",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Record By AD ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/ad/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"ad",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Multi Delete Record By AD IDS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "selected_data[]",
+									"value": "1",
+									"description": "Record ID Integer",
+									"type": "text"
+								},
+								{
+									"key": "selected_data[]",
+									"value": "2",
+									"description": "Record ID Integer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/ad/multi_delete",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"ad",
+								"multi_delete"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tag",
+			"item": [
+				{
+					"name": "get all tags",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/tag",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tag"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "show by tag id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "lang",
+									"value": "ar",
+									"description": "For Return Language Message default Arabic",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/tag/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tag",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Record tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "some string",
+									"description": "normal input text",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/tag",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tag"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Record By tag ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "some string",
+									"description": "normal input text",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/tag/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tag",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Record By tag ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{local}}/tag/{PUT_YOUR_ID}",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tag",
+								"{PUT_YOUR_ID}"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				},
+				{
+					"name": "Multi Delete Record By IDs tag",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "selected_data[]",
+									"value": "1",
+									"description": "Record ID Integer",
+									"type": "text"
+								},
+								{
+									"key": "selected_data[]",
+									"value": "2",
+									"description": "Record ID Integer",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{local}}/tag/multi_delete",
+							"host": [
+								"{{local}}"
+							],
+							"path": [
+								"tag",
+								"multi_delete"
+							]
+						},
+						"description": "test description"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://127.0.0.1:8000/api/v1"
+		},
+		{
+			"key": "token",
+			"value": ""
+		}
+	]
+}
